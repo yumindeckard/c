@@ -1,14 +1,13 @@
 #include <stdio.h>
 
-int main()
-{
-  const int TOTAL = 100;
-  int price = 0;
+int main() {
+    const int TOTAL = 100;
+    int price = 0;
 
-  printf("What's the price? ");
-  scanf("%d", &price);
+    printf("What's the price? ");
+    scanf("%d", &price);
 
-  printf("The change: %d\n", TOTAL - price);
+    printf("The change: %d\n", TOTAL - price);
 
-  return 0;
+    return 0;
 }
