@@ -17,9 +17,7 @@ int main(int argc, char const *argv[]) {
   int ret = 0;
   for (int i = 1; i <= min; i++) {
     if (a % i == 0 && b % i == 0) {
-      if (ret < i) {
-        ret = i;
-      }
+      ret = i;
     }
   }
 
