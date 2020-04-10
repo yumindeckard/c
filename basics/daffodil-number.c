@@ -6,6 +6,11 @@ int main(int argc, char const *argv[]) {
   printf("请输入一个数:\n");
   scanf("%d", &n);
 
+  if (n < 3 || n > 7) {
+    printf("这个数应该是3~7之间。\n");
+    return 0;
+  }
+
   int min = pow(10, n - 1);
   int max = pow(10, n) - 1;
 
