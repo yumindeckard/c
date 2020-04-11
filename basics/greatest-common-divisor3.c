@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int getGCD(int a, int b);  // 函数原型
+int getGCD(int a, int b);  // 函数原型 function prototype
 
 int main(int argc, char const *argv[]) {
   int m, n;
