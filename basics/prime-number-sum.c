@@ -1,16 +1,17 @@
+#include <stdbool.h>
 #include <stdio.h>
 
 int is_prime(int num) {
   if (num == 2) {
-    return 1;
+    return true;
   }
 
   for (int i = 2; i < num; i++) {
     if (num % i == 0) {
-      return 0;
+      return false;
     }
   }
-  return 1;
+  return true;
 }
 
 int main(int argc, char const *argv[]) {
@@ -27,8 +28,6 @@ int main(int argc, char const *argv[]) {
 
   if (m == 1) {
     m = 2;
-    count = -1;
-    sum = -2;
   }
 
   for (int i = m; i <= n; i++) {
