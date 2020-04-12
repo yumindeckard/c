@@ -1,12 +1,13 @@
+#include <math.h>
 #include <stdbool.h>
 #include <stdio.h>
 
-int is_prime(int num) {
-  if (num == 2) {
-    return true;
-  }
+bool is_prime(int num) {
+  if (num == 1) return false;
+  if (num == 2) return true;
+  if (num > 2 && num % 2 == 0) return false;
 
-  for (int i = 2; i < num; i++) {
+  for (int i = 3; i < sqrt(num); i = i + 2) {
     if (num % i == 0) {
       return false;
     }
@@ -31,7 +32,7 @@ int main(int argc, char const *argv[]) {
   }
 
   for (int i = m; i <= n; i++) {
-    int isPrime = is_prime(i);
+    bool isPrime = is_prime(i);
     if (isPrime) {
       count++;
       sum += i;
